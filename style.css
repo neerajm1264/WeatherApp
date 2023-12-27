@@ -281,8 +281,8 @@ img {
 }
 @media screen and (max-width: 468px) {
   .cards .card {
-    width: 169px;
-    height: 226px;
+    width: 240px;
+    height: 240px;
   }
   .location{
     font-size: 30px;
