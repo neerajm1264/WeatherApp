@@ -103,7 +103,6 @@ function getWeatherData(city, unit, hourlyorWeek) {
       windSpeed.innerText = today.windspeed;
       measureUvIndex(today.uvindex);
       mainIcon.src = getIcon(today.icon);
-      changeBackground(today.icon);
       humidity.innerText = today.humidity + "%";
       updateHumidityStatus(today.humidity);
       visibilty.innerText = today.visibility;
@@ -166,6 +165,7 @@ function updateForecast(data, unit, type) {
         <span class="temp-unit">${tempUnit}</span>
       </div>
     `;
+
     weatherCards.appendChild(card);
     day++;
     if (day >= data.length) {
@@ -191,26 +191,6 @@ function getIcon(condition) {
   } else {
     return "assets/day.png";
   }
-}
-
-//                               function to change background depending on weather conditions
-function changeBackground(condition) {
-  const body = document.querySelector("body");
-  let bg = "";
-  if (condition === "partly-cloudy-day") {
-    bg = "https://i.ibb.co/qNv7NxZ/pc.webp";
-  } else if (condition === "partly-cloudy-night") {
-    bg = "https://i.ibb.co/RDfPqXz/pcn.jpg";
-  } else if (condition === "rain") {
-    bg = "https://i.ibb.co/h2p6Yhd/rain.webp";
-  } else if (condition === "clear-day") {
-    bg = "https://i.ibb.co/WGry01m/cd.jpg";
-  } else if (condition === "clear-night") {
-    bg = "https://i.ibb.co/kqtZ1Gx/cn.jpg";
-  } else {
-    bg = "https://i.ibb.co/qNv7NxZ/pc.webp";
-  }
-  body.style.backgroundImage = `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(${bg})`;
 }
 
 //                                          get hours from hh:mm:ss

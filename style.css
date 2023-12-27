@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 :root {
-  --primary-color: #5598fd;
+  --custom-color: #032e6e;
+  --custom2-color: orangered
+  ;
 }
 
 * {
@@ -16,12 +18,12 @@ body {
   min-height: 100vh;
   min-width: 1000px;
   padding: 50px;
-  background: var(--primary-color);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./images/cd.jpg");
+  background: var(--custom-color);
   background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+
 }
 img {
   width: 100%;
@@ -63,15 +65,15 @@ img {
 }
 .search input:focus {
   outline: none;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--custom-color);
 }
 .search button {
-  min-width: 40px;
+  min-width: 60px;
   height: 40px;
   border: none;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  background: var(--primary-color);
+  background: var(--custom-color);
   color: #fff;
   font-size: 14px;
   cursor: pointer;
@@ -181,7 +183,7 @@ img {
   text-transform: capitalize;
 }
 .main nav .options button.active {
-  color: var(--primary-color);
+  color: var(--custom2-color);
 }
 
 .main nav .units button {
@@ -270,9 +272,79 @@ img {
 .credits {
   text-align: center;
   font-size: 12px;
-  color: #c2c2c2;
+  color: #504f4f;
   position: absolute;
   bottom: 30px;
   left: 50%;
+  font-style: italic;
   transform: translateX(-50%);
+}
+@media screen and (max-width: 468px) {
+  .cards .card {
+    width: 169px;
+    height: 226px;
+  }
+  .location{
+    font-size: 30px;
+    margin-top: 40px;
+    font-weight: bolder;
+  }
+  .tempp{
+    display: block;
+    margin: auto;
+  }
+  .main nav .options button {
+  font-size: 30px;
+  }
+  .search{
+    margin: auto;
+    display: block;
+  }
+  .search button{
+    font-size: 20px;
+    min-width: 60px;
+    display: block;
+    margin: 1rem auto;
+    padding: 0rem 1rem;
+    border-radius: 2rem;
+  }
+.search input {
+  border-radius: 1rem;
+  height: 60px;
+  font-size: 28px;
+  color: #000000;
+  font-weight: bolder;
+}
+  .wrapper{
+    display: block;
+  }
+  .sidebar{
+    width: 100%;
+  }
+  .weather-icon {
+    width: 45%;
+    margin-bottom: 40px;
+    display: none;
+  }
+  .temperature{
+    margin: 2rem 0;
+  }
+  #date-time{
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  .condition-rain {
+    font-size: 24px;
+    font-weight: bolder;
+  }
+  .main nav {
+    justify-content: center;
+  }
+  .units{
+    margin: 0 3rem;
+  }
+  .credits{
+    font-size: 21px;
+    font-weight: bolder;
+  }
 }
