@@ -152,6 +152,7 @@ function updateForecast(data, unit, type) {
     let iconCondition = data[day].icon;
     let iconSrc = getIcon(iconCondition);
     let tempUnit = "°C";
+    let conditions = data[day].conditions;
     if (unit === "f") {
       tempUnit = "°F";
     }
@@ -160,6 +161,8 @@ function updateForecast(data, unit, type) {
       <div class="card-icon">
         <img src="${iconSrc}" class="day-icon" alt="" />
       </div>
+      <h2>${conditions}</h2>
+
       <div class="day-temp">
         <h2 class="temp">${dayTemp}</h2>
         <span class="temp-unit">${tempUnit}</span>

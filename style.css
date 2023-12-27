@@ -205,8 +205,8 @@ img {
 }
 
 .cards .card {
-  width: 100px;
-  height: 130px;
+  width: 160px;
+  min-height: 130px;
   border-radius: 20px;
   color: #1a1a1a;
   background-color: #fff;
